@@ -1,0 +1,275 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+img{
+    height: 250px;
+    width: 250px;
+}
+
+.parallax-container {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    background-color: #ffe6f2;
+}
+
+.parallax-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.layer-bg {
+    transform: translateZ(-10px) scale(2);
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+.layer-1, .layer-2, .layer-3 {
+    pointer-events: none;
+}
+
+.floating-heart, .floating-star, .floating-flower {
+    position: absolute;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-heart {
+    left: 20%;
+    top: 30%;
+}
+
+.floating-star {
+    right: 25%;
+    top: 60%;
+}
+
+.floating-flower {
+    left: 70%;
+    top: 40%;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.content {
+    position: relative;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    max-width: 800px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #ff1493;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+#countdown {
+    font-size: 1.5rem;
+    color: #ff69b4;
+    margin: 1rem 0;
+    font-weight: bold;
+}
+
+.love-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.love-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff1493;
+    transition: transform 0.3s ease;
+}
+
+.love-photo:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.paper-button, .happiness-button, .quiz-option {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem;
+}
+
+.paper-button:hover, .happiness-button:hover, .quiz-option:hover {
+    background-color: #ff1493;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+#message-container {
+    margin-top: 2rem;
+    perspective: 1000px;
+}
+
+.paper {
+    background-color: #fff5f8;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.paper.open {
+    transform: rotateX(180deg);
+}
+
+#love-message {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: #ff1493;
+    line-height: 1.6;
+}
+
+.hidden {
+    display: none;
+}
+
+.love-quotes {
+    margin-top: 2rem;
+}
+
+.love-quotes p {
+    font-style: italic;
+    color: #ff69b4;
+    margin: 1rem 0;
+}
+
+.memory-lane, .love-quiz, .happiness-check, .love-story, .virtual-date, .love-calculator, .future-together {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+}
+
+.memory-timeline {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+
+.memory-item {
+    text-align: center;
+    width: 30%;
+}
+
+.memory-date {
+    font-weight: bold;
+    color: #ff1493;
+    margin-bottom: 0.5rem;
+}
+
+.memory-description {
+    font-style: italic;
+    color: #ff69b4;
+}
+
+.quiz-question {
+    margin-top: 1rem;
+}
+
+#big-heart {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    font-size: 200px;
+    color: #ff1493;
+    z-index: 1000;
+    transition: transform 0.5s ease;
+}
+
+#big-heart.show {
+    transform: translate(-50%, -50%) scale(1);
+    animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: translate(-50%, -50%) scale(1); }
+    100% { transform: translate(-50%, -50%) scale(1.2); }
+}
+
+.music-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.music-button:hover {
+    background-color: #ff1493;
+    transform: scale(1.1);
+}
+
+#story-container, #date-activity, #love-result, #future-container {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #ff1493;
+}
+
+.love-calculator input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+    border: 2px solid #ff69b4;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+.love-calculator input:focus {
+    outline: none;
+    border-color: #ff1493;
+    box-shadow: 0 0 5px rgba(255, 20, 147, 0.5);
+}
+

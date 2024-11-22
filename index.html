@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Monthsary, My Love!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
+</head>
+<body>
+    <div id="scene" class="parallax-container">
+        <div class="parallax-layer layer-bg" data-depth="0.1"></div>
+        <div class="parallax-layer" data-depth="0.2">
+            <img src="./Pink-heart-premium-clipart-PNG.png" alt="Flower" class="floating-flower">        </div>
+        <div class="parallax-layer" data-depth="0.4">
+            <img src="./Pink-star-on-transparent-background-PNG.png" alt="Star" class="floating-star">
+        </div>
+        <div class="parallax-layer" data-depth="0.6">
+            <img src="./Flower 08.png" alt="Heart" class="floating-heart">
+        </div>
+        <div class="content">
+            <h1>Happy Monthsary, <span id="name"></span>!</h1>
+            <div id="countdown"></div>
+            <div class="love-gallery">
+                <img src="./7.jpg" alt="Love 3" class="love-photo">
+                <img src="./3.jpg" alt="Love 2" class="love-photo">              
+                <img src="./2.jpg" alt="Love 1" class="love-photo">
+            </div>
+            <button id="reveal-message" class="paper-button">Open My Love Note</button>
+            <div id="message-container" class="hidden">
+                <div class="paper">
+                    <p id="love-message"></p>
+                </div>
+            </div>
+            <div class="love-quotes">
+                <p>"Every moment with you is a blessing."</p>
+                <p>"Your love is the rhythm of my heart."</p>
+                <p>"You're the missing piece to my puzzle."</p>
+            </div>
+            <div class="memory-lane">
+                <h2>Our Memory Lane</h2>
+                <div class="memory-timeline">
+                    <div class="memory-item">
+                        <div class="memory-date">First Date</div>
+                        <div class="memory-description">The day our journey began</div>
+                    </div>
+                    <div class="memory-item">
+                        <div class="memory-date">First Kiss</div>
+                        <div class="memory-description">A moment of magic</div>
+                    </div>
+                    <div class="memory-item">
+                        <div class="memory-date">First "I Love You"</div>
+                        <div class="memory-description">Words that changed everything</div>
+                    </div>
+                </div>
+            </div>
+            <div class="love-quiz">
+                <h2>Our Love Quiz</h2>
+                <div class="quiz-question">
+                    <p>What's my favorite flower?</p>
+                    <button class="quiz-option" data-correct="true">Rose</button>
+                    <button class="quiz-option">Tulip</button>
+                    <button class="quiz-option">Sunflower</button>
+                </div>
+            </div>
+            <div class="happiness-check">
+                <h2>A Question for You</h2>
+                <p>Are you happy with me?</p>
+                <button id="yes-button" class="happiness-button">Yes</button>
+                <button id="no-button" class="happiness-button">No</button>
+            </div>
+            <div class="love-story">
+                <h2>Our Love Story</h2>
+                <div id="story-container"></div>
+                <button id="generate-story" class="paper-button">Generate Our Story</button>
+            </div>
+            <div class="virtual-date">
+                <h2>Virtual Date Night</h2>
+                <div id="date-activity"></div>
+                <button id="new-date-idea" class="paper-button">New Date Idea</button>
+            </div>
+            <div class="love-calculator">
+                <h2>Love Calculator</h2>
+                <input type="text" id="name1" placeholder="Your Name">
+                <input type="text" id="name2" placeholder="Your Partner's Name">
+                <button id="calculate-love" class="paper-button">Calculate Love</button>
+                <div id="love-result"></div>
+            </div>
+            <div class="future-together">
+                <h2>Our Future Together</h2>
+                <div id="future-container"></div>
+                <button id="reveal-future" class="paper-button">Peek into Our Future</button>
+            </div>
+        </div>
+    </div>
+    <div id="scroll-reveal" class="scroll-reveal">
+        <p>Hello mahal I hope u like this little gift even tho I'm little busy I tried this pinky website its all code of mine di tolad sa tiktok na nakaw lang anyhow this website is from my heart showing how much I love you baby I hope and wish for more years to us mahal iloveyousomuchh</p>
+    </div>
+    <div id="big-heart" class="hidden">❤️</div>
+    <audio id="background-music" loop muted>
+        <source src="Dionela - Musika (Official Lyric Video).mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="music-toggle" class="music-button">🔇</button>
+    <script src="script.js"></script>
+</body>
+</html>
+
